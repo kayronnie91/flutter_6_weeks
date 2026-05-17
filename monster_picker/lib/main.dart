@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Monster{
+class Monster {
   late String monsterImage;
   late String monsterName;
   late String monsterTitle;
   late int monsterPower;
 
-  Monster({required this.monsterImage, required this.monsterName, required this.monsterTitle, required this.monsterPower});
+  Monster({
+    required this.monsterImage,
+    required this.monsterName,
+    required this.monsterTitle,
+    required this.monsterPower,
+  });
 }
 
 void main() {
@@ -21,6 +26,26 @@ class MonsterApp extends StatefulWidget {
 }
 
 class _MonsterAppState extends State<MonsterApp> {
+  List<Monster> monsterList = [
+    Monster(
+      monsterImage: 'assets/images/Golem.png',
+      monsterName: 'Golem',
+      monsterTitle: 'Ancient Mutant',
+      monsterPower: 7500,
+    ),
+    Monster(
+      monsterImage: 'assets/images/Guardian.png',
+      monsterName: 'Guardian Elk',
+      monsterTitle: 'Forest Fighter',
+      monsterPower: 6450,
+    ),
+    Monster(
+      monsterImage: 'assets/images/Nyxarion.png',
+      monsterName: 'Nyxarion',
+      monsterTitle: 'Ancient Dragon',
+      monsterPower: 9500,
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +63,7 @@ class _MonsterAppState extends State<MonsterApp> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Container(,), // monster image container
+            Container(), // monster image container
             Text(''), // Monster title
             Text(''), // Monster description
             Container(), // Progress Bar Container
