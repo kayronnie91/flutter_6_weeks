@@ -46,6 +46,13 @@ class _MonsterAppState extends State<MonsterApp> {
       monsterPower: 9500,
     ),
   ];
+  Monster? selectedMonster;
+  @override
+  initState() {
+    super.initState();
+    selectedMonster = monsterList[0];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
