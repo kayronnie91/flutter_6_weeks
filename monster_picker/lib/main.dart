@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
 
+class Monster{
+  late String monsterImage;
+  late String monsterName;
+  late String monsterTitle;
+  late int monsterPower;
+
+  Monster({required this.monsterImage, required this.monsterName, required this.monsterTitle, required this.monsterPower});
+}
+
 void main() {
   runApp(const MaterialApp(home: MonsterApp()));
 }
@@ -29,7 +38,7 @@ class _MonsterAppState extends State<MonsterApp> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Container(), // monster image container
+            Container(,), // monster image container
             Text(''), // Monster title
             Text(''), // Monster description
             Container(), // Progress Bar Container
