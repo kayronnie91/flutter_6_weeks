@@ -15,7 +15,9 @@ class Monster {
 }
 
 void main() {
-  runApp(const MaterialApp(home: MonsterApp()));
+  runApp(
+    const MaterialApp(debugShowCheckedModeBanner: false, home: MonsterApp()),
+  );
 }
 
 class MonsterApp extends StatefulWidget {
@@ -126,13 +128,45 @@ class _MonsterAppState extends State<MonsterApp> {
                       ),
                     ],
                   ),
+                  SizedBox(height: 10),
+                  LinearProgressIndicator(value: 0.75),
                 ],
               ),
-            ), // Progress Bar Container
-            Row(), // Row with monster cards - horizonal scroll view
+            ),
+            SizedBox(height: 20), // Progress Bar Container
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                'Choose your guardian',
+                style: TextStyle(
+                  color: Color(0xFFE5E2E1),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  fontFamily: 'Sora',
+                ),
+              ),
+            ),
+
+            Row(
+              children: [
+                Container(), // Monster 1
+                Container(), // monster 2
+                Container(), // monster 3
+              ],
+            ), // Row with monster cards - horizonal scroll view
           ],
         ),
       ),
     );
+  }
+}
+
+class MonsterCard extends StatelessWidget {
+  const MonsterCard({super.key, required this.monster});
+  final Monster monster;
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
