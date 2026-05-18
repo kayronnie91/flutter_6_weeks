@@ -70,10 +70,65 @@ class _MonsterAppState extends State<MonsterApp> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Container(), // monster image container
-            Text(''), // Monster title
-            Text(''), // Monster description
-            Container(), // Progress Bar Container
+            Container(
+              child: Image.asset(selectedMonster!.monsterImage),
+              height: 350,
+              width: double.infinity,
+            ), // monster image container
+            SizedBox(height: 30),
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                selectedMonster!.monsterName,
+                style: TextStyle(
+                  color: Color(0xFFEBB2FF),
+                  fontFamily: 'Sora',
+                  fontSize: 40,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ), // Monster title
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                selectedMonster!.monsterTitle,
+                style: TextStyle(
+                  color: Color(0xFFEBB2FF),
+                  fontFamily: 'Sora',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w100,
+                ),
+              ),
+            ), // Monster description
+            Container(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Power Level',
+                        style: TextStyle(
+                          color: Color(0xFFEBB2FF),
+                          fontFamily: 'Sora',
+                          fontSize: 14,
+                          fontWeight: FontWeight.w100,
+                        ),
+                      ),
+                      Text(
+                        selectedMonster!.monsterPower.toString(),
+                        style: TextStyle(
+                          color: Color(0xFFEBB2FF),
+                          fontFamily: 'Sora',
+                          fontSize: 14,
+                          fontWeight: FontWeight.w100,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ), // Progress Bar Container
             Row(), // Row with monster cards - horizonal scroll view
           ],
         ),
