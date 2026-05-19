@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
 class Monster {
-  late String monsterImage;
-  late String monsterName;
-  late String monsterTitle;
-  late int monsterPower;
+  final String monsterImage;
+  final String monsterName;
+  final String monsterTitle;
+  final int monsterAttack;
+  final int monsterDefense;
+  final int maxHp;
 
   Monster({
     required this.monsterImage,
     required this.monsterName,
     required this.monsterTitle,
-    required this.monsterPower,
+    required this.monsterAttack,
+    required this.monsterDefense,
+    required this.maxHp,
   });
 }
 
@@ -33,19 +37,25 @@ class _MonsterAppState extends State<MonsterApp> {
       monsterImage: 'assets/images/Golem.png',
       monsterName: 'Golem',
       monsterTitle: 'Ancient Mutant',
-      monsterPower: 7500,
+      monsterAttack: 75,
+      monsterDefense: 90,
+      maxHp: 100,
     ),
     Monster(
       monsterImage: 'assets/images/Guardian.png',
       monsterName: 'Guardian Elk',
       monsterTitle: 'Forest Fighter',
-      monsterPower: 6450,
+      monsterAttack: 64,
+      monsterDefense: 60,
+      maxHp: 100,
     ),
     Monster(
       monsterImage: 'assets/images/Nyxarion.png',
       monsterName: 'Nyxarion',
       monsterTitle: 'Ancient Dragon',
-      monsterPower: 9500,
+      monsterAttack: 95,
+      monsterDefense: 95,
+      maxHp: 100,
     ),
   ];
   Monster? selectedMonster;
@@ -110,7 +120,7 @@ class _MonsterAppState extends State<MonsterApp> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Power Level',
+                          'Monster Attack Power',
                           style: TextStyle(
                             color: Color(0xFFEBB2FF),
                             fontFamily: 'Sora',
@@ -119,7 +129,7 @@ class _MonsterAppState extends State<MonsterApp> {
                           ),
                         ),
                         Text(
-                          selectedMonster!.monsterPower.toString(),
+                          selectedMonster!.monsterAttack.toString(),
                           style: TextStyle(
                             color: Color(0xFFEBB2FF),
                             fontFamily: 'Sora',
@@ -131,7 +141,7 @@ class _MonsterAppState extends State<MonsterApp> {
                     ),
                     SizedBox(height: 10),
                     LinearProgressIndicator(
-                      value: selectedMonster!.monsterPower / 10000,
+                      value: selectedMonster!.monsterAttack / 100,
                     ),
                   ],
                 ),
