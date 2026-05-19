@@ -68,93 +68,118 @@ class _MonsterAppState extends State<MonsterApp> {
         ),
         actions: [Icon(Icons.settings, color: Color(0xFFEBB2FF))],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Container(
-              child: Image.asset(selectedMonster!.monsterImage),
-              height: 350,
-              width: double.infinity,
-            ), // monster image container
-            SizedBox(height: 30),
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                selectedMonster!.monsterName,
-                style: TextStyle(
-                  color: Color(0xFFEBB2FF),
-                  fontFamily: 'Sora',
-                  fontSize: 40,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ), // Monster title
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                selectedMonster!.monsterTitle,
-                style: TextStyle(
-                  color: Color(0xFFEBB2FF),
-                  fontFamily: 'Sora',
-                  fontSize: 14,
-                  fontWeight: FontWeight.w100,
-                ),
-              ),
-            ), // Monster description
-            Container(
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Power Level',
-                        style: TextStyle(
-                          color: Color(0xFFEBB2FF),
-                          fontFamily: 'Sora',
-                          fontSize: 14,
-                          fontWeight: FontWeight.w100,
-                        ),
-                      ),
-                      Text(
-                        selectedMonster!.monsterPower.toString(),
-                        style: TextStyle(
-                          color: Color(0xFFEBB2FF),
-                          fontFamily: 'Sora',
-                          fontSize: 14,
-                          fontWeight: FontWeight.w100,
-                        ),
-                      ),
-                    ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Container(
+                child: Image.asset(selectedMonster!.monsterImage),
+                height: 350,
+                width: double.infinity,
+              ), // monster image container
+              SizedBox(height: 30),
+              Align(
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  selectedMonster!.monsterName,
+                  style: TextStyle(
+                    color: Color(0xFFEBB2FF),
+                    fontFamily: 'Sora',
+                    fontSize: 40,
+                    fontWeight: FontWeight.w700,
                   ),
-                  SizedBox(height: 10),
-                  LinearProgressIndicator(value: 0.75),
-                ],
-              ),
-            ),
-            SizedBox(height: 20), // Progress Bar Container
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                'Choose your guardian',
-                style: TextStyle(
-                  color: Color(0xFFE5E2E1),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                  fontFamily: 'Sora',
+                ),
+              ), // Monster title
+              Align(
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  selectedMonster!.monsterTitle,
+                  style: TextStyle(
+                    color: Color(0xFFEBB2FF),
+                    fontFamily: 'Sora',
+                    fontSize: 14,
+                    fontWeight: FontWeight.w100,
+                  ),
+                ),
+              ), // Monster description
+              Container(
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Power Level',
+                          style: TextStyle(
+                            color: Color(0xFFEBB2FF),
+                            fontFamily: 'Sora',
+                            fontSize: 14,
+                            fontWeight: FontWeight.w100,
+                          ),
+                        ),
+                        Text(
+                          selectedMonster!.monsterPower.toString(),
+                          style: TextStyle(
+                            color: Color(0xFFEBB2FF),
+                            fontFamily: 'Sora',
+                            fontSize: 14,
+                            fontWeight: FontWeight.w100,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    LinearProgressIndicator(value: 0.75),
+                  ],
                 ),
               ),
-            ),
+              SizedBox(height: 20), // Progress Bar Container
+              Align(
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  'Choose your guardian',
+                  style: TextStyle(
+                    color: Color(0xFFE5E2E1),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    fontFamily: 'Sora',
+                  ),
+                ),
+              ),
 
-            Row(
-              children: [
-                Container(), // Monster 1
-                Container(), // monster 2
-                Container(), // monster 3
-              ],
-            ), // Row with monster cards - horizonal scroll view
-          ],
+              Row(
+                children: [
+                  MonsterCard(
+                    monster: monsterList[0],
+                    onTap: () {
+                      setState(() {
+                        selectedMonster = monsterList[0];
+                      });
+                    },
+                  ), // Monster 1
+                  MonsterCard(
+                    monster: monsterList[1],
+                    onTap: () {
+                      setState(() {
+                        selectedMonster = monsterList[1];
+                      });
+                    },
+                  ), // monster 2
+
+                  MonsterCard(
+                    monster: monsterList[2],
+                    onTap: () {
+                      setState(() {
+                        selectedMonster = monsterList[2];
+                      });
+                    },
+                  ),
+                  // monster 3
+                ],
+              ), // Row with monster cards - horizonal scroll view
+            ],
+          ),
         ),
       ),
     );
@@ -162,11 +187,41 @@ class _MonsterAppState extends State<MonsterApp> {
 }
 
 class MonsterCard extends StatelessWidget {
-  const MonsterCard({super.key, required this.monster});
+  const MonsterCard({super.key, required this.monster, required this.onTap});
   final Monster monster;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 100,
+        height: 120,
+        margin: EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          color: Color(0xFF1E1E1E),
+          borderRadius: BorderRadius.circular(20),
+        ),
+
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(monster.monsterImage, height: 60),
+
+            SizedBox(height: 10),
+
+            Text(
+              monster.monsterName,
+              style: TextStyle(
+                color: Color(0xFFEBB2FF),
+                fontFamily: 'Sora',
+                fontSize: 12,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
