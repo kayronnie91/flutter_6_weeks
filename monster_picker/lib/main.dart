@@ -149,9 +149,11 @@ class _MonsterAppState extends State<MonsterApp> {
               ),
 
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   MonsterCard(
                     monster: monsterList[0],
+                    isSelected: selectedMonster == monsterList[0],
                     onTap: () {
                       setState(() {
                         selectedMonster = monsterList[0];
@@ -160,6 +162,7 @@ class _MonsterAppState extends State<MonsterApp> {
                   ), // Monster 1
                   MonsterCard(
                     monster: monsterList[1],
+                    isSelected: selectedMonster == monsterList[1],
                     onTap: () {
                       setState(() {
                         selectedMonster = monsterList[1];
@@ -169,6 +172,7 @@ class _MonsterAppState extends State<MonsterApp> {
 
                   MonsterCard(
                     monster: monsterList[2],
+                    isSelected: selectedMonster == monsterList[2],
                     onTap: () {
                       setState(() {
                         selectedMonster = monsterList[2];
@@ -187,9 +191,15 @@ class _MonsterAppState extends State<MonsterApp> {
 }
 
 class MonsterCard extends StatelessWidget {
-  const MonsterCard({super.key, required this.monster, required this.onTap});
+  const MonsterCard({
+    super.key,
+    required this.monster,
+    required this.onTap,
+    required this.isSelected,
+  });
   final Monster monster;
   final VoidCallback onTap;
+  final bool isSelected;
 
   @override
   Widget build(BuildContext context) {
@@ -200,6 +210,9 @@ class MonsterCard extends StatelessWidget {
         height: 120,
         margin: EdgeInsets.all(8),
         decoration: BoxDecoration(
+          border: Border.all(
+            color: isSelected ? Color(0xFFEBB2FF) : Colors.transparent,
+          ),
           color: Color(0xFF1E1E1E),
           borderRadius: BorderRadius.circular(20),
         ),
