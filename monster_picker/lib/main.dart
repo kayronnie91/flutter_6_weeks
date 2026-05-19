@@ -130,7 +130,9 @@ class _MonsterAppState extends State<MonsterApp> {
                       ],
                     ),
                     SizedBox(height: 10),
-                    LinearProgressIndicator(value: 0.75),
+                    LinearProgressIndicator(
+                      value: selectedMonster!.monsterPower / 10000,
+                    ),
                   ],
                 ),
               ),
