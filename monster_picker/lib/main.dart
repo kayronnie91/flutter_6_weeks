@@ -1,5 +1,46 @@
 import 'package:flutter/material.dart';
 
+class StatBar extends StatelessWidget {
+  final String statName;
+  final int barLevel;
+  const StatBar({super.key, required this.barLevel, required this.statName});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                statName,
+                style: TextStyle(
+                  color: Color(0xFFEBB2FF),
+                  fontFamily: 'Sora',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w100,
+                ),
+              ),
+              Text(
+                barLevel.toString(),
+                style: TextStyle(
+                  color: Color(0xFFEBB2FF),
+                  fontFamily: 'Sora',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w100,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          LinearProgressIndicator(value: barLevel / 100),
+        ],
+      ),
+    );
+  }
+}
+
 class Monster {
   final String monsterImage;
   final String monsterName;
@@ -113,39 +154,11 @@ class _MonsterAppState extends State<MonsterApp> {
                   ),
                 ),
               ), // Monster description
-              Container(
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Monster Attack Power',
-                          style: TextStyle(
-                            color: Color(0xFFEBB2FF),
-                            fontFamily: 'Sora',
-                            fontSize: 14,
-                            fontWeight: FontWeight.w100,
-                          ),
-                        ),
-                        Text(
-                          selectedMonster!.monsterAttack.toString(),
-                          style: TextStyle(
-                            color: Color(0xFFEBB2FF),
-                            fontFamily: 'Sora',
-                            fontSize: 14,
-                            fontWeight: FontWeight.w100,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 10),
-                    LinearProgressIndicator(
-                      value: selectedMonster!.monsterAttack / 100,
-                    ),
-                  ],
-                ),
-              ),
+              SizedBox(height: 20),
+              StatBar(barLevel: 75, statName: 'Monster Attack Power'),
+              SizedBox(height: 10),
+              StatBar(barLevel: 95, statName: 'Monster Defense'),
+
               SizedBox(height: 20), // Progress Bar Container
               Align(
                 alignment: Alignment.bottomLeft,
