@@ -155,9 +155,15 @@ class _MonsterAppState extends State<MonsterApp> {
                 ),
               ), // Monster description
               SizedBox(height: 20),
-              StatBar(barLevel: 75, statName: 'Monster Attack Power'),
+              StatBar(
+                barLevel: selectedMonster!.monsterAttack,
+                statName: 'Monster Attack Power',
+              ),
               SizedBox(height: 10),
-              StatBar(barLevel: 95, statName: 'Monster Defense'),
+              StatBar(
+                barLevel: selectedMonster!.monsterDefense,
+                statName: 'Monster Defense',
+              ),
 
               SizedBox(height: 20), // Progress Bar Container
               Align(
