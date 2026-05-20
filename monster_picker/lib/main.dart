@@ -164,6 +164,11 @@ class _MonsterAppState extends State<MonsterApp> {
                 barLevel: selectedMonster!.monsterDefense,
                 statName: 'Monster Defense',
               ),
+              SizedBox(height: 10),
+              StatBar(
+                barLevel: selectedMonster!.maxHp,
+                statName: 'Health Points',
+              ),
 
               SizedBox(height: 20), // Progress Bar Container
               Align(
