@@ -162,6 +162,17 @@ class _MonsterAppState extends State<MonsterApp> {
                   // monster 3
                 ],
               ), // Row with monster cards - horizonal scroll view
+              SizedBox(height: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFFEBB2FF),
+                ),
+                onPressed: () {},
+                child: Text(
+                  'Confirm Selection',
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
             ],
           ),
         ),
