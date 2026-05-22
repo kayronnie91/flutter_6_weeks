@@ -24,6 +24,15 @@ class BattleScreen extends StatelessWidget {
               statName: 'HP Remaining',
             ),
           ),
+          SizedBox(height: 20),
+          Text('VS'),
+          Image.asset(player2Monster.monsterImage),
+          Container(
+            child: StatBar(
+              barLevel: player2Monster.maxHp,
+              statName: 'HP Remaining',
+            ),
+          ),
         ],
       ),
     );
