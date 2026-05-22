@@ -20,6 +20,7 @@ class _MonsterAppState extends State<MonsterApp> {
   Monster? player1Monster;
   Monster? player2Monster;
   bool isPlayer1 = true;
+  String buttonText = 'Confirm Selection';
   List<Monster> monsterList = [
     Monster(
       monsterImage: 'assets/images/Golem.png',
@@ -179,14 +180,12 @@ class _MonsterAppState extends State<MonsterApp> {
                     isPlayer1 = false;
                   } else {
                     player2Monster = selectedMonster;
+                    buttonText = 'Start Battle';
                   }
 
                   setState(() {});
                 },
-                child: Text(
-                  'Confirm Selection',
-                  style: TextStyle(color: Colors.black),
-                ),
+                child: Text(buttonText, style: TextStyle(color: Colors.black)),
               ),
             ],
           ),
