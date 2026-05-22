@@ -62,7 +62,7 @@ class _MonsterAppState extends State<MonsterApp> {
         backgroundColor: Color(0xFF131313),
         leading: Icon(Icons.menu, color: Color(0xFFEBB2FF)),
         title: const Text(
-          'Monster Picker',
+          'Monster Battles',
           style: TextStyle(color: Color(0xFFEBB2FF), fontFamily: 'Sora'),
         ),
         actions: [Icon(Icons.settings, color: Color(0xFFEBB2FF))],
