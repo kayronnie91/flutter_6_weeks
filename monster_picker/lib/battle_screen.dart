@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monster_picker/monster.dart';
+import 'package:monster_picker/stat_bar.dart';
 
 class BattleScreen extends StatelessWidget {
   final Monster player1Monster;
@@ -14,8 +15,15 @@ class BattleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Monster Arena')),
-      body: Column(children: [
-          
+      body: Column(
+        children: [
+          Image.asset(player1Monster.monsterImage),
+          Container(
+            child: StatBar(
+              barLevel: player1Monster.maxHp,
+              statName: 'HP Remaining',
+            ),
+          ),
         ],
       ),
     );
