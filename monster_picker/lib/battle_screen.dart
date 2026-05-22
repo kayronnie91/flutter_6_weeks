@@ -14,26 +14,45 @@ class BattleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Monster Arena')),
-      body: Column(
-        children: [
-          Image.asset(player1Monster.monsterImage),
-          Container(
-            child: StatBar(
-              barLevel: player1Monster.maxHp,
-              statName: 'HP Remaining',
+      backgroundColor: Color(0xFF131313),
+      appBar: AppBar(
+        backgroundColor: Color(0xFF131313),
+        leading: Icon(Icons.menu, color: Color(0xFFEBB2FF)),
+        title: const Text(
+          'Battle Arena',
+          style: TextStyle(color: Color(0xFFEBB2FF), fontFamily: 'Sora'),
+        ),
+        actions: [Icon(Icons.settings, color: Color(0xFFEBB2FF))],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(
+              player1Monster.monsterImage,
+              height: 350,
+              width: double.infinity,
             ),
-          ),
-          SizedBox(height: 20),
-          Text('VS'),
-          Image.asset(player2Monster.monsterImage),
-          Container(
-            child: StatBar(
-              barLevel: player2Monster.maxHp,
-              statName: 'HP Remaining',
+            Container(
+              child: StatBar(
+                barLevel: player1Monster.maxHp,
+                statName: 'HP Remaining',
+              ),
             ),
-          ),
-        ],
+            SizedBox(height: 20),
+            Text('VS'),
+            Image.asset(
+              player2Monster.monsterImage,
+              height: 350,
+              width: double.infinity,
+            ),
+            Container(
+              child: StatBar(
+                barLevel: player2Monster.maxHp,
+                statName: 'HP Remaining',
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

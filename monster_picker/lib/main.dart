@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monster_picker/battle_screen.dart';
 import 'monster.dart';
 import 'package:monster_picker/monster_card.dart';
 import 'stat_bar.dart';
@@ -181,6 +182,15 @@ class _MonsterAppState extends State<MonsterApp> {
                   } else {
                     player2Monster = selectedMonster;
                     buttonText = 'Start Battle';
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BattleScreen(
+                          player1Monster: player1Monster!,
+                          player2Monster: player2Monster!,
+                        ),
+                      ),
+                    );
                   }
 
                   setState(() {});
