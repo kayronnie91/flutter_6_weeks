@@ -17,6 +17,9 @@ class MonsterApp extends StatefulWidget {
 }
 
 class _MonsterAppState extends State<MonsterApp> {
+  Monster? player1Monster;
+  Monster? player2Monster;
+  bool isPlayer1 = true;
   List<Monster> monsterList = [
     Monster(
       monsterImage: 'assets/images/Golem.png',
@@ -118,7 +121,10 @@ class _MonsterAppState extends State<MonsterApp> {
               Align(
                 alignment: Alignment.bottomLeft,
                 child: Text(
-                  'Choose your guardian',
+                  isPlayer1 == true
+                      ? 'Player 1 Choose your guardian'
+                      : 'Player 2 Choose your guadian',
+
                   style: TextStyle(
                     color: Color(0xFFE5E2E1),
                     fontWeight: FontWeight.bold,
@@ -167,7 +173,16 @@ class _MonsterAppState extends State<MonsterApp> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFFEBB2FF),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  if (isPlayer1) {
+                    player1Monster = selectedMonster;
+                    isPlayer1 = false;
+                  } else {
+                    player2Monster = selectedMonster;
+                  }
+
+                  setState(() {});
+                },
                 child: Text(
                   'Confirm Selection',
                   style: TextStyle(color: Colors.black),
