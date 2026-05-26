@@ -23,6 +23,10 @@ class _BattleScreenState extends State<BattleScreen> {
         widget.player2Monster.monsterDefense;
   }
 
+  int applyDamage(int calculateDamage) {
+    return widget.player2Monster.maxHp - calculateDamage;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -68,6 +72,7 @@ class _BattleScreenState extends State<BattleScreen> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
+                  calculateDamage();
                   setState(() {});
                 },
                 child: Text('Attack'),
