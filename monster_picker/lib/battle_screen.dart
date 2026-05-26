@@ -17,10 +17,16 @@ class BattleScreen extends StatefulWidget {
 }
 
 class _BattleScreenState extends State<BattleScreen> {
+  bool isPlayer1Turn = true;
+  int calculateDamage() {
+    return widget.player1Monster.monsterAttack -
+        widget.player2Monster.monsterDefense;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(20),
       child: Scaffold(
         backgroundColor: Color(0xFF131313),
         appBar: AppBar(
@@ -37,7 +43,7 @@ class _BattleScreenState extends State<BattleScreen> {
             children: [
               Image.asset(
                 widget.player1Monster.monsterImage,
-                height: 350,
+                height: 200,
                 width: double.infinity,
               ),
               Container(
@@ -47,10 +53,10 @@ class _BattleScreenState extends State<BattleScreen> {
                 ),
               ),
               SizedBox(height: 20),
-              Text('VS'),
+              Text('VS', style: TextStyle(color: Colors.white, fontSize: 24)),
               Image.asset(
                 widget.player2Monster.monsterImage,
-                height: 350,
+                height: 200,
                 width: double.infinity,
               ),
               Container(
@@ -58,6 +64,13 @@ class _BattleScreenState extends State<BattleScreen> {
                   barLevel: widget.player2Monster.maxHp,
                   statName: 'HP Remaining',
                 ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {});
+                },
+                child: Text('Attack'),
               ),
             ],
           ),
