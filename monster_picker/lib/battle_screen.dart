@@ -18,13 +18,14 @@ class BattleScreen extends StatefulWidget {
 
 class _BattleScreenState extends State<BattleScreen> {
   bool isPlayer1Turn = true;
+  int player2CurrentHp = 100;
   int calculateDamage() {
     return widget.player1Monster.monsterAttack -
         widget.player2Monster.monsterDefense;
   }
 
-  int applyDamage(int calculateDamage) {
-    return widget.player2Monster.maxHp - calculateDamage;
+  int applyDamage(int damage) {
+    return widget.player2Monster.maxHp - damage;
   }
 
   @override
@@ -65,15 +66,17 @@ class _BattleScreenState extends State<BattleScreen> {
               ),
               Container(
                 child: StatBar(
-                  barLevel: widget.player2Monster.maxHp,
+                  barLevel: player2CurrentHp,
                   statName: 'HP Remaining',
                 ),
               ),
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  calculateDamage();
-                  setState(() {});
+                  final damage = calculateDamage();
+                  setState(() {
+                    player2CurrentHp = applyDamage(damage);
+                  });
                 },
                 child: Text('Attack'),
               ),
