@@ -84,9 +84,19 @@ class _BattleScreenState extends State<BattleScreen> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  final damage = calculateDamage();
                   setState(() {
-                    player2CurrentHp = applyDamage(damage);
+                    if (isPlayer1Turn) {
+                      final damage = calculateDamage();
+                      player2CurrentHp = applyDamage(damage);
+                    } else {
+                      if (player1CurrentHp - 10 <= 0) {
+                        player1CurrentHp = 0;
+                      } else {
+                        player1CurrentHp -= 10;
+                      }
+                    }
+
+                    isPlayer1Turn = !isPlayer1Turn;
                   });
                 },
                 child: Text('Attack'),
