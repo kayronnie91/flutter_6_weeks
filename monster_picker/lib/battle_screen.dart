@@ -64,7 +64,7 @@ class _BattleScreenState extends State<BattleScreen> {
               ),
               Container(
                 child: StatBar(
-                  barLevel: widget.player1Monster.maxHp,
+                  barLevel: player1CurrentHp,
                   statName: 'HP Remaining',
                 ),
               ),
