@@ -20,12 +20,22 @@ class _BattleScreenState extends State<BattleScreen> {
   bool isPlayer1Turn = true;
   int player2CurrentHp = 100;
   int calculateDamage() {
+    if (widget.player1Monster.monsterAttack -
+            widget.player2Monster.monsterDefense <=
+        0) {
+      return 0;
+    }
+
     return widget.player1Monster.monsterAttack -
         widget.player2Monster.monsterDefense;
   }
 
   int applyDamage(int damage) {
-    return widget.player2Monster.maxHp - damage;
+    if (player2CurrentHp - damage <= 0) {
+      return 0;
+    }
+
+    return player2CurrentHp - damage;
   }
 
   @override
