@@ -18,6 +18,7 @@ class BattleScreen extends StatefulWidget {
 
 class _BattleScreenState extends State<BattleScreen> {
   bool isPlayer1Turn = true;
+  int player1CurrentHp = 100;
   int player2CurrentHp = 100;
   int calculateDamage() {
     if (widget.player1Monster.monsterAttack -
