@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'story_scene.dart';
 
 void main() {
   runApp(const StoryApp());
@@ -12,9 +13,12 @@ class StoryApp extends StatefulWidget {
 }
 
 class _StoryAppState extends State<StoryApp> {
-  String currentScene = 'Nightmare Adventure';
+  String currentScene = 'Apartment';
   @override
   Widget build(BuildContext context) {
+    final currentStoryScene = storyScenes.firstWhere(
+      (story) => story.currentScene == currentScene,
+    );
     return MaterialApp(
       home: Scaffold(
         body: Center(
@@ -25,13 +29,27 @@ class _StoryAppState extends State<StoryApp> {
               children: [
                 Text(currentScene),
                 SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      currentScene = 'Hallway';
-                    });
-                  },
-                  child: Text('Enter'),
+                Image.asset(currentStoryScene.imagePath),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          currentScene = 'Apartment';
+                        });
+                      },
+                      child: Text('Enter'),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          currentScene = 'Apartment';
+                        });
+                      },
+                      child: Text('Enter'),
+                    ),
+                  ],
                 ),
               ],
             ),
