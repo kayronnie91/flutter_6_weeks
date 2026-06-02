@@ -34,12 +34,13 @@ class _StoryAppState extends State<StoryApp> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(),
                       onPressed: () {
                         setState(() {
                           currentScene = 'Apartment';
                         });
                       },
-                      child: Text('Enter'),
+                      child: Text(currentStoryScene.choice1),
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -47,7 +48,7 @@ class _StoryAppState extends State<StoryApp> {
                           currentScene = 'Apartment';
                         });
                       },
-                      child: Text('Enter'),
+                      child: Text(currentStoryScene.choice2),
                     ),
                   ],
                 ),
