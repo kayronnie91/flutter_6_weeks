@@ -179,4 +179,109 @@ Then the doorknob slowly began to turn.''',
     nextScene1: 'Bedroom',
     nextScene2: 'Living Room Return',
   ),
+  StoryScene(
+    currentScene: 'Parked Car',
+    imagePath: 'assets/images/ParkedCar.png',
+    text: '''Lily forced herself toward the parked car.
+
+The metallic scraping sound stopped.
+
+Silence.
+
+Her flashlight trembled in her hand as she stepped closer.
+
+The windows were covered in fog.
+
+Something moved inside.
+
+A shape.
+
+Too quick to see clearly.
+
+Lily wiped the driver's side window.
+
+The seat was empty.
+
+Then she noticed the trunk.
+
+It was slightly open.
+
+Just a few inches.
+
+A foul smell drifted out.
+
+Rotting.
+
+Something wet dripped onto the pavement below.
+
+Drip.
+
+Drip.
+
+Drip.
+
+The trunk slowly creaked open another inch by itself.
+
+Then Lily heard breathing.
+
+Not behind her.
+
+Not beside her.
+
+Inside the trunk.
+
+What should I do?''',
+    choice1: 'Open trunk',
+    choice2: 'Back away',
+    nextScene1: 'Trunk',
+    nextScene2: 'Parking Lot Retreat',
+  ),
+
+  StoryScene(
+    currentScene: 'Shadow Figure',
+    imagePath: imagePath,
+    text: '''Lily ran toward the figure.
+
+The flashlight beam bounced wildly as she crossed the parking lot.
+
+The figure didn't move.
+
+It simply stood there.
+
+Waiting.
+
+As Lily got closer, she realized something was wrong.
+
+The shape wasn't a person.
+
+Its arms were too long.
+
+Its head tilted at an impossible angle.
+
+The creature slowly turned toward her.
+
+Two golden eyes glowed in the darkness.
+
+'Lily,' it whispered.
+
+Her blood froze.
+
+It knew her name.
+
+Then the creature pointed toward the old lighthouse on Windy Hill.
+
+A low growl echoed behind her.
+
+Something else was moving between the parked cars.
+
+The creature took a step back and pointed again.
+
+Toward the lighthouse.
+
+What should I do?''',
+    choice1: 'Follow Creature',
+    choice2: 'Hide',
+    nextScene1: 'Lighthouse Path',
+    nextScene2: 'Parked Cars',
+  ),
 ];
