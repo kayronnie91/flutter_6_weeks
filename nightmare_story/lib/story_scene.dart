@@ -45,8 +45,8 @@ Knock.
 Toms face turned pale.
 'What if it’s here?'
 What should I do?''',
-    choice1: 'Grab a flashlight and investigate outside',
-    choice2: 'Lock the door and keep watching the window',
+    choice1: 'Investigate outside',
+    choice2: 'Keep watching the window',
     nextScene1: 'Parking Lot',
     nextScene2: 'Living Room',
   ),
