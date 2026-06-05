@@ -969,4 +969,36 @@ What should I do?''',
     nextScene1: 'Lighthouse',
     nextScene2: 'Lighthouse',
   ),
+
+  StoryScene(
+    currentScene: 'Town Escape',
+    imagePath: 'assets/images/TownEscape.png',
+    text: '''Lily ran toward town.
+
+Branches whipped against her face as she raced through the darkness.
+
+Behind her, the lighthouse beam swept across the sky.
+
+For a moment she thought she had escaped.
+
+Then every streetlight in town suddenly went dark.
+
+The silence was overwhelming.
+
+Far behind her, a deep horn echoed from the sea.
+
+Something was still coming.
+
+Lily stopped.
+
+She could keep running.
+
+Or return to the lighthouse and stop whatever was happening.
+
+What should I do?''',
+    choice1: 'Return to Lighthouse',
+    choice2: 'Keep Running',
+    nextScene1: 'Lighthouse',
+    nextScene2: 'Ending Awakening',
+  ),
 ];
