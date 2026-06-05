@@ -50,4 +50,133 @@ What should I do?''',
     nextScene1: 'Parking Lot',
     nextScene2: 'Living Room',
   ),
+
+  StoryScene(
+    currentScene: 'Parking Lot',
+    imagePath: 'assets/images/ParkingLot.png',
+    text: '''Lily grabbed a flashlight and slipped outside.
+
+The rain had stopped, but the air felt strangely cold.
+
+The parking lot beside the apartment building was empty.
+
+Almost empty.
+
+Near the far fence stood a dark figure.
+
+Too tall.
+Too thin.
+
+It wasn't moving.
+
+Lily shined her flashlight toward it.
+
+The beam flickered.
+
+For a moment the figure vanished.
+
+Then the light steadied.
+
+The figure was closer.
+
+Much closer.
+
+A metallic scraping sound echoed from behind a parked car.
+
+Something was there.
+
+Watching.
+
+What should I do?''',
+    choice1: 'Check out the car',
+    choice2: 'Run toward figure',
+    nextScene1: 'Parked Car',
+    nextScene2: 'Shadow Figure',
+  ),
+
+  StoryScene(
+    currentScene: 'Living Room',
+    imagePath: 'assets/images/LivingRoom.png',
+    text: '''Tom wouldn't stop staring at the window.
+
+The golden eyes were still there.
+
+Watching.
+
+Unblinking.
+
+Lily forced herself to look away and stepped into the living room.
+
+The house felt wrong.
+
+Too quiet.
+
+Even the rain outside had stopped.
+
+A cold draft drifted through the room.
+
+Tom frowned.
+
+'Did you leave the back door open?'
+
+Lily shook her head.
+
+Then they both heard it.
+
+Creak.
+
+A slow wooden creak from the hallway.
+
+Creak.
+
+Another step.
+
+Something was inside the house.
+
+The lights flickered.
+
+For a split second the room went dark.
+
+When the lights returned, a muddy footprint stood in the middle of the floor.
+
+Neither of them had moved.
+
+Tom pointed toward the hallway.
+
+'Lily... there's another one.'
+
+A second footprint appeared.
+
+Then a third.
+
+Slowly moving toward them.
+
+From the darkness at the end of the hallway came a faint whisper.
+
+'Come find me...'
+
+What should I do?''',
+    choice1: 'Follow footprints',
+    choice2: 'Lock the Door',
+    nextScene1: 'Hallway',
+    nextScene2: 'Front Door',
+  ),
+
+  StoryScene(
+    currentScene: 'Hallway',
+    imagePath: 'assets/images/Hallway.png',
+    text: '''Lily followed the muddy footprints into the hallway.
+
+The whisper grew louder.
+
+'Come find me...'
+
+The footprints ended at a closed bedroom door.
+
+Then the doorknob slowly began to turn.''',
+    choice1: 'Open Door',
+    choice2: 'Run to Tom',
+    nextScene1: 'Bedroom',
+    nextScene2: 'Living Room Return',
+  ),
 ];

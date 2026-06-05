@@ -21,52 +21,49 @@ class _StoryAppState extends State<StoryApp> {
       (story) => story.currentScene == currentScene,
     );
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(30.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(currentScene),
-                SizedBox(height: 20),
-                Image.asset(currentStoryScene.imagePath),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    // ElevatedButton(
-                    //   style: ElevatedButton.styleFrom(),
-                    //   onPressed: () {
-                    //     setState(() {
-                    //       currentScene = 'Apartment';
-                    //     });
-                    //   },
-                    //   child: Text(currentStoryScene.choice1),
-                    // ),
-                    ChoiceButton(
-                      text: currentStoryScene.choice1,
-                      textColor: Colors.white,
-                      onPressed: () {
-                        setState(() {
-                          currentScene = currentStoryScene.nextScene1;
-                        });
-                      },
-                      color: Colors.purple,
-                    ),
-                    SizedBox(width: 10),
-                    ChoiceButton(
-                      text: currentStoryScene.choice2,
-                      textColor: Colors.white,
-                      onPressed: () {
-                        setState(() {
-                          currentScene = currentStoryScene.nextScene2;
-                        });
-                      },
-                      color: Colors.purpleAccent,
-                    ),
-                  ],
-                ),
-              ],
+        body: SingleChildScrollView(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(currentScene),
+                  SizedBox(height: 20),
+                  Text(currentStoryScene.text),
+                  SizedBox(height: 20),
+                  Image.asset(currentStoryScene.imagePath),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ChoiceButton(
+                        text: currentStoryScene.choice1,
+                        textColor: Colors.white,
+                        onPressed: () {
+                          setState(() {
+                            currentScene = currentStoryScene.nextScene1;
+                          });
+                        },
+                        color: Colors.purple,
+                      ),
+                      SizedBox(width: 10),
+                      ChoiceButton(
+                        text: currentStoryScene.choice2,
+                        textColor: Colors.white,
+                        onPressed: () {
+                          setState(() {
+                            currentScene = currentStoryScene.nextScene2;
+                          });
+                        },
+                        color: Colors.purpleAccent,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
