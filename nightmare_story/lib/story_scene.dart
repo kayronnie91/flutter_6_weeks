@@ -239,7 +239,7 @@ What should I do?''',
 
   StoryScene(
     currentScene: 'Shadow Figure',
-    imagePath: imagePath,
+    imagePath: 'assets/images/ShadowFigure.png',
     text: '''Lily ran toward the figure.
 
 The flashlight beam bounced wildly as she crossed the parking lot.
@@ -283,5 +283,118 @@ What should I do?''',
     choice2: 'Hide',
     nextScene1: 'Lighthouse Path',
     nextScene2: 'Parked Cars',
+  ),
+  StoryScene(
+    currentScene: 'Lighthouse Path',
+    imagePath: 'assets/images/LighthousePath.png',
+    text: '''The creature turned and began walking toward Windy Hill.
+
+Lily hesitated.
+
+Every instinct told her to run.
+
+But the creature had spoken her name.
+
+And it seemed to know something.
+
+The golden eyes drifted through the darkness ahead of her.
+
+Always just far enough away.
+
+The path climbed steeply toward the lighthouse.
+
+The wind howled through the trees.
+
+Branches scraped against one another like skeletal fingers.
+
+Halfway up the hill, Lily noticed old wooden signs along the trail.
+
+Most had fallen over.
+
+One remained standing.
+
+Its faded paint read:
+
+DANGER
+KEEP AWAY
+
+Someone had scratched a second message underneath.
+
+IT WAKES WHEN THE LIGHT SHINES
+
+A sudden scream echoed from somewhere near the lighthouse.
+
+Not an animal.
+
+Human.
+
+The creature stopped and pointed toward two different paths.
+
+One led through the forest.
+
+The other climbed directly toward the lighthouse.
+
+What should I do?''',
+    choice1: 'Follow Path',
+    choice2: 'Climb to Lighthouse',
+    nextScene1: 'Forest Path',
+    nextScene2: 'Lighthouse Entrance',
+  ),
+  StoryScene(
+    currentScene: 'Forest Path',
+    imagePath: 'assets/images/ForestPath.png',
+    text: '''Lily stepped onto the narrow forest trail.
+
+The shadow creature remained behind.
+
+Watching.
+
+The trees quickly swallowed the lighthouse light.
+
+Darkness closed around her.
+
+The path twisted between ancient pines.
+
+The air smelled of wet earth and salt from the sea.
+
+Then she noticed something hanging from a branch.
+
+A doll.
+
+Old.
+
+Rotting.
+
+Its glass eyes reflected her flashlight.
+
+A second doll hung farther ahead.
+
+Then a third.
+
+Someone had placed them along the trail.
+
+Leading deeper into the forest.
+
+A sudden crack echoed behind her.
+
+Lily spun around.
+
+Nothing.
+
+But when she turned back, the nearest doll was gone.
+
+Her heart pounded.
+
+Ahead, the path split in two.
+
+One route led toward a strange glow between the trees.
+
+The other descended into a dark ravine where water could be heard rushing below.
+
+What should I do?''',
+    choice1: 'Follow Glow',
+    choice2: 'Climb Ravine',
+    nextScene1: 'Forest Clearing',
+    nextScene2: 'Ravine',
   ),
 ];

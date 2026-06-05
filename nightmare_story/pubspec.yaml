@@ -63,6 +63,9 @@ flutter:
     - assets/images/LivingRoom.png
     - assets/images/Hallway.png
     - assets/images/ParkedCar.png
+    - assets/images/ShadowFigure.png
+    - assets/images/LighthousePath.png
+    - assets/images/ForestPath.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
