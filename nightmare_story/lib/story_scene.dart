@@ -46,7 +46,7 @@ Toms face turned pale.
 'What if it’s here?'
 What should I do?''',
     choice1: 'Investigate outside',
-    choice2: 'Keep watching the window',
+    choice2: 'Watch the window',
     nextScene1: 'Parking Lot',
     nextScene2: 'Living Room',
   ),

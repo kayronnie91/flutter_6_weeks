@@ -45,6 +45,7 @@ class _StoryAppState extends State<StoryApp> {
                     // ),
                     ChoiceButton(
                       text: currentStoryScene.choice1,
+                      textColor: Colors.white,
                       onPressed: () {
                         setState(() {
                           currentScene = currentStoryScene.nextScene1;
@@ -52,8 +53,10 @@ class _StoryAppState extends State<StoryApp> {
                       },
                       color: Colors.purple,
                     ),
+                    SizedBox(width: 10),
                     ChoiceButton(
                       text: currentStoryScene.choice2,
+                      textColor: Colors.white,
                       onPressed: () {
                         setState(() {
                           currentScene = currentStoryScene.nextScene2;
