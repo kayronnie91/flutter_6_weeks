@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nightmare_story/choice_button.dart';
 import 'story_scene.dart';
 
 void main() {
@@ -33,22 +34,32 @@ class _StoryAppState extends State<StoryApp> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(),
+                    // ElevatedButton(
+                    //   style: ElevatedButton.styleFrom(),
+                    //   onPressed: () {
+                    //     setState(() {
+                    //       currentScene = 'Apartment';
+                    //     });
+                    //   },
+                    //   child: Text(currentStoryScene.choice1),
+                    // ),
+                    ChoiceButton(
+                      text: currentStoryScene.choice1,
                       onPressed: () {
                         setState(() {
-                          currentScene = 'Apartment';
+                          currentScene = currentStoryScene.nextScene1;
                         });
                       },
-                      child: Text(currentStoryScene.choice1),
+                      color: Colors.purple,
                     ),
-                    ElevatedButton(
+                    ChoiceButton(
+                      text: currentStoryScene.choice2,
                       onPressed: () {
                         setState(() {
-                          currentScene = 'Apartment';
+                          currentScene = currentStoryScene.nextScene2;
                         });
                       },
-                      child: Text(currentStoryScene.choice2),
+                      color: Colors.purpleAccent,
                     ),
                   ],
                 ),
