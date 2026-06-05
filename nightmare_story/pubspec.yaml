@@ -66,6 +66,9 @@ flutter:
     - assets/images/ShadowFigure.png
     - assets/images/LighthousePath.png
     - assets/images/ForestPath.png
+    - assets/images/ForestClearing.png
+    - assets/images/Lighthouse.png
+    - assets/images/FinalChoice.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

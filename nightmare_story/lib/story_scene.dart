@@ -397,4 +397,149 @@ What should I do?''',
     nextScene1: 'Forest Clearing',
     nextScene2: 'Ravine',
   ),
+  StoryScene(
+    currentScene: 'Forest Clearing',
+    imagePath: 'assets/images/ForestClearing.png',
+    text: '''The strange glow led Lily into a small clearing.
+
+The trees ended abruptly.
+
+In the center stood a circle of ancient stones.
+
+A pale blue light floated above them.
+
+The air hummed.
+
+As Lily stepped closer, she saw something inside the circle.
+
+A photograph.
+
+Her photograph.
+
+Taken yesterday.
+
+On the back someone had written:
+
+THE LIGHTHOUSE REMEMBERS.
+
+The ground trembled.
+
+The blue light suddenly shot toward the lighthouse.
+
+For a moment Lily saw hundreds of shadowy figures standing between the trees.
+
+Watching.
+
+Waiting.
+
+Then they vanished.
+
+Only one path remained.
+
+The path to the lighthouse.
+
+What should I do?''',
+    choice1: 'Go to Lighthouse',
+    choice2: 'Run to town',
+    nextScene1: 'Lighthouse',
+    nextScene2: 'Town Escape',
+  ),
+  StoryScene(
+    currentScene: 'Lighthouse',
+    imagePath: 'assets/images/Lighthouse.png',
+    text: '''The lighthouse door stood open.
+
+The beam above swept across the stormy sea.
+
+Inside, dust covered everything.
+
+The place looked abandoned.
+
+Yet someone had recently lit candles along the spiral staircase.
+
+At the center of the room stood an old journal.
+
+Lily opened it.
+
+Every page contained the same warning.
+
+DO NOT LET THE LIGHT REACH THE SEA.
+
+Again and again.
+
+Hundreds of times.
+
+Then she reached the final page.
+
+The handwriting changed.
+
+If you are reading this, it already knows your name.
+
+A deafening horn echoed outside.
+
+The lighthouse beam suddenly brightened.
+
+Far below, something enormous moved beneath the waves.
+
+The entire tower trembled.
+
+A control panel beside the lamp began flashing.
+
+Lily realized she had only seconds.
+
+What should I do?''',
+    choice1: 'Turn Off Lighthouse',
+    choice2: 'Leave Light On',
+    nextScene1: 'Final Choice',
+    nextScene2: 'Awakening',
+  ),
+  StoryScene(
+    currentScene: 'Final Choice',
+    imagePath: 'assets/images/FinalChoice.png',
+    text: '''Lily rushed to the control panel.
+
+The lighthouse shook violently.
+
+Outside, the sea churned beneath the cliffs.
+
+Something enormous was rising.
+
+The shadow creature appeared in the doorway.
+
+For the first time, it spoke clearly.
+
+'The light calls it.'
+
+The beam swept across the water.
+
+Far below, a massive golden eye opened beneath the waves.
+
+The creature stepped beside Lily.
+
+'I was never your enemy.'
+
+The control panel flashed red.
+
+EMERGENCY OVERRIDE
+
+The mechanism could only do one thing before it burned out.
+
+Either the lighthouse would go dark forever.
+
+Or the beam would become brighter than ever.
+
+The tower groaned.
+
+Glass shattered above.
+
+The sea creature began climbing toward the cliffs.
+
+This was the final decision.
+
+What should I do?''',
+    choice1: 'Turn it Off!',
+    choice2: 'Aplify Light',
+    nextScene1: 'Ending Light Extinguished',
+    nextScene2: 'Ending Awakening',
+  ),
 ];
