@@ -724,4 +724,62 @@ What should I do?''',
     nextScene1: 'Hidden Passage',
     nextScene2: 'Journal Room',
   ),
+
+  StoryScene(
+    currentScene: 'Hidden Passage',
+    imagePath: 'assets/images/HiddenPassage.png',
+    text: '''Lily pulled the loose floorboard aside.
+
+A narrow stone staircase descended into darkness.
+
+Cold air rushed upward.
+
+The tunnel smelled of seawater.
+
+She switched on her flashlight and climbed down.
+
+The passage stretched beneath the house.
+
+Strange symbols covered the walls.
+
+The same symbol from the journal.
+
+The same symbol from the muddy footprints.
+
+Someone had been here many times.
+
+After several minutes, the tunnel opened into a large underground chamber.
+
+A rusted metal door stood at the far end.
+
+Above it, someone had painted a warning in red:
+
+DO NOT FOLLOW THE LIGHT.
+
+Lily pushed the door open.
+
+Moonlight flooded the chamber.
+
+She froze.
+
+The tunnel exited onto the cliffs below Windy Hill.
+
+The lighthouse stood directly above her.
+
+The same lighthouse from the journal.
+
+The same lighthouse from the photographs.
+
+The same lighthouse from her nightmare.
+
+There was nowhere else to go.
+
+Only one path remained.
+
+What should I do?''',
+    choice1: 'Climb Lighthouse',
+    choice2: 'Turn Back',
+    nextScene1: 'Lighthouse',
+    nextScene2: 'Lighthouse',
+  ),
 ];
