@@ -73,6 +73,10 @@ flutter:
     - assets/images/EndingAwakening.png
     - assets/images/Bedroom.png
     - assets/images/HiddenPassage.png
+    - assets/images/Trunk.png
+    - assets/images/ParkingLotRetreat.png
+    - assets/images/JournalRoom.png
+    - assets/images/Ravine.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

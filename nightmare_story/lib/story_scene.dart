@@ -159,7 +159,7 @@ What should I do?''',
     choice1: 'Follow footprints',
     choice2: 'Lock the Door',
     nextScene1: 'Hallway',
-    nextScene2: 'Front Door',
+    nextScene2: 'Bedroom',
   ),
 
   StoryScene(
@@ -177,7 +177,7 @@ Then the doorknob slowly began to turn.''',
     choice1: 'Open Door',
     choice2: 'Run to Tom',
     nextScene1: 'Bedroom',
-    nextScene2: 'Living Room Return',
+    nextScene2: 'Living Room',
   ),
   StoryScene(
     currentScene: 'Parked Car',
@@ -282,7 +282,7 @@ What should I do?''',
     choice1: 'Follow Creature',
     choice2: 'Hide',
     nextScene1: 'Lighthouse Path',
-    nextScene2: 'Parked Cars',
+    nextScene2: 'Parking Lot',
   ),
   StoryScene(
     currentScene: 'Lighthouse Path',
@@ -338,7 +338,7 @@ What should I do?''',
     choice1: 'Follow Path',
     choice2: 'Climb to Lighthouse',
     nextScene1: 'Forest Path',
-    nextScene2: 'Lighthouse Entrance',
+    nextScene2: 'Lighthouse',
   ),
   StoryScene(
     currentScene: 'Forest Path',
@@ -491,7 +491,7 @@ What should I do?''',
     choice1: 'Turn Off Lighthouse',
     choice2: 'Leave Light On',
     nextScene1: 'Final Choice',
-    nextScene2: 'Awakening',
+    nextScene2: 'Ending Awakening',
   ),
   StoryScene(
     currentScene: 'Final Choice',
@@ -779,6 +779,193 @@ Only one path remained.
 What should I do?''',
     choice1: 'Climb Lighthouse',
     choice2: 'Turn Back',
+    nextScene1: 'Lighthouse',
+    nextScene2: 'Lighthouse',
+  ),
+
+  // MISSING SCENES //
+  StoryScene(
+    currentScene: 'Trunk',
+    imagePath: 'assets/images/Trunk.png',
+    text: '''Lily swallowed hard and pulled the trunk open.
+
+The foul smell hit her instantly.
+
+Inside was no body.
+
+Instead, the trunk was filled with black seawater.
+
+The water rippled as if something beneath it had just moved.
+
+Lily aimed her flashlight inside.
+
+A photograph floated on the surface.
+
+It showed the lighthouse.
+
+Written on the back were three words.
+
+IT KNOWS YOU.
+
+Suddenly the water began to bubble.
+
+Something was rising.
+
+Lily grabbed the photograph and stumbled away from the car.
+
+A low growl echoed from somewhere behind her.
+
+Near the fence, the tall shadow figure was waiting.
+
+Its golden eyes glowed in the darkness.
+
+What should I do?''',
+    choice1: 'Approach Figure',
+    choice2: 'Call Out',
+    nextScene1: 'Shadow Figure',
+    nextScene2: 'Shadow Figure',
+  ),
+
+  StoryScene(
+    currentScene: 'Parking Lot Retreat',
+    imagePath: 'assets/images/ParkingLotRetreat.png',
+    text: '''Lily slowly backed away from the car.
+
+The breathing inside the trunk continued.
+
+Slow.
+
+Heavy.
+
+Patient.
+
+Then the trunk slammed shut.
+
+BANG.
+
+The sound echoed through the empty parking lot.
+
+Every nearby car alarm suddenly activated.
+
+Lights flashed everywhere.
+
+For a moment Lily thought she saw dozens of dark figures standing between the vehicles.
+
+Watching her.
+
+Then the alarms stopped.
+
+The figures vanished.
+
+Only one remained.
+
+The tall shape near the fence.
+
+Motionless.
+
+Waiting.
+
+Its glowing eyes fixed on her.
+
+Then it slowly raised one arm and pointed toward Windy Hill.
+
+Toward the lighthouse.
+
+What should I do?''',
+    choice1: 'Approach Figure',
+    choice2: 'Follow Its Direction',
+    nextScene1: 'Shadow Figure',
+    nextScene2: 'Shadow Figure',
+  ),
+
+  StoryScene(
+    currentScene: 'Journal Room',
+    imagePath: 'assets/images/JournalRoom.png',
+    text: '''Lily sat down and continued reading.
+
+Most of the journal contained sketches of the lighthouse.
+
+But the later pages were different.
+
+The writer claimed the lighthouse was never built to guide ships.
+
+It was built to keep something asleep.
+
+Page after page described strange dreams.
+
+Golden eyes beneath the sea.
+
+Voices coming from the waves.
+
+People disappearing during storms.
+
+Near the end of the journal, one sentence appeared again and again.
+
+DO NOT FOLLOW THE LIGHT.
+
+DO NOT FOLLOW THE LIGHT.
+
+DO NOT FOLLOW THE LIGHT.
+
+The final page contained a rough map.
+
+A hidden tunnel connected the house directly to the cliffs below the lighthouse.
+
+At that exact moment, a floorboard beneath Lily's feet shifted.
+
+Cold air rushed upward.
+
+The hidden passage had opened.
+
+What should I do?''',
+    choice1: 'Enter Tunnel',
+    choice2: 'Follow Map',
+    nextScene1: 'Hidden Passage',
+    nextScene2: 'Hidden Passage',
+  ),
+
+  StoryScene(
+    currentScene: 'Ravine',
+    imagePath: 'assets/images/Ravine.png',
+    text: '''Lily carefully descended into the ravine.
+
+The sound of rushing water echoed between the steep rock walls.
+
+Ancient symbols had been carved into the stone.
+
+Some looked centuries old.
+
+Others appeared freshly scratched.
+
+As she followed the stream, she discovered dozens of coins scattered across the ground.
+
+Every coin carried the same strange symbol she had seen in the journal.
+
+Then the whispering started.
+
+Hundreds of voices.
+
+All speaking at once.
+
+The words were impossible to understand.
+
+The ravine gradually widened until it opened onto a cliff overlooking the sea.
+
+Above her stood the lighthouse.
+
+Its beam swept across the dark water.
+
+For a brief moment Lily thought she saw something enormous moving beneath the waves.
+
+Then the whispering stopped.
+
+Only silence remained.
+
+And the lighthouse.
+
+What should I do?''',
+    choice1: 'Go to Lighthouse',
+    choice2: 'Climb the Cliff',
     nextScene1: 'Lighthouse',
     nextScene2: 'Lighthouse',
   ),
