@@ -673,4 +673,55 @@ The Awakening''',
     nextScene1: 'Apartment',
     nextScene2: '',
   ),
+
+  // Right side choice branch//
+  StoryScene(
+    currentScene: 'Bedroom',
+    imagePath: 'assets/images/Bedroom.png',
+    text: '''Lily pushed the bedroom door open.
+
+The room was empty.
+
+Moonlight spilled through dusty curtains.
+
+At first, nothing seemed unusual.
+
+Then she noticed the walls.
+
+Hundreds of newspaper clippings had been pinned across them.
+
+Every article mentioned the lighthouse.
+
+Disappearances.
+
+Strange lights.
+
+Missing fishermen.
+
+In the center of the room stood an old wooden desk.
+
+A journal rested on top.
+
+The same symbol from the muddy footprints was carved into its cover.
+
+Lily opened it.
+
+Inside was a map.
+
+A red line connected the house to the lighthouse.
+
+But it didn't use the roads.
+
+It used a hidden tunnel.
+
+A floorboard creaked beneath her feet.
+
+Something was underneath.
+
+What should I do?''',
+    choice1: 'Open Floorboard',
+    choice2: 'Read More',
+    nextScene1: 'Hidden Passage',
+    nextScene2: 'Journal Room',
+  ),
 ];
