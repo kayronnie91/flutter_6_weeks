@@ -542,4 +542,135 @@ What should I do?''',
     nextScene1: 'Ending Light Extinguished',
     nextScene2: 'Ending Awakening',
   ),
+  StoryScene(
+    currentScene: 'Ending Light Extinguished',
+    imagePath: 'assets/images/EndingLightExtinguished.png',
+    text: '''Lily pulled the emergency lever.
+
+The lighthouse beam flickered.
+
+Once.
+
+Twice.
+
+Then darkness swallowed the tower.
+
+Outside, the sea creature let out a deep roar.
+
+The sound shook the cliffs.
+
+For a terrifying moment, nothing happened.
+
+Then the enormous golden eye beneath the waves slowly closed.
+
+The ocean grew calm.
+
+The storm vanished.
+
+Moonlight broke through the clouds.
+
+The shadow creature stood beside the doorway.
+
+Its glowing eyes faded.
+
+'Thank you,' it whispered.
+
+Its body dissolved into drifting black mist.
+
+By morning, the lighthouse stood silent.
+
+The old journal had vanished.
+
+The strange footprints were gone.
+
+No one in town believed Lily's story.
+
+Not even Tom.
+
+But sometimes, on quiet nights, she would climb Windy Hill and stare across the sea.
+
+The light never shone again.
+
+And nothing ever answered from the darkness below.
+
+THE END
+
+Good Ending
+Keeper of the Light''',
+    choice1: 'Play Again',
+    choice2: '',
+    nextScene1: 'Apartment',
+    nextScene2: '',
+  ),
+  StoryScene(
+    currentScene: 'Ending Awakening',
+    imagePath: 'assets/images/EndingAwakening.png',
+    text: '''Lily slammed the override forward.
+
+The lighthouse beam exploded with light.
+
+Brighter than ever before.
+
+The entire ocean turned gold.
+
+For one terrible second, the sea became perfectly still.
+
+Then something answered.
+
+A roar echoed across the water.
+
+Not from above.
+
+From below.
+
+The ocean erupted.
+
+A colossal shape rose from the depths.
+
+Its single golden eye opened fully.
+
+The cliffs shattered beneath its weight.
+
+The shadow creature screamed.
+
+'NO!'
+
+But it was too late.
+
+The lighthouse had called it.
+
+The beam locked onto the creature's eye.
+
+The sky darkened.
+
+Stars vanished.
+
+One by one, every light in the town below went out.
+
+Lily watched in horror as the thing climbed from the sea.
+
+Far below, people began to run.
+
+Car alarms echoed through the streets.
+
+The creature turned its gaze toward the town.
+
+Toward the world.
+
+The lighthouse beam continued to shine.
+
+And somewhere in the darkness beyond the horizon...
+
+Other eyes opened.
+
+THE END
+
+Bad Ending
+
+The Awakening''',
+    choice1: 'Play Again',
+    choice2: '',
+    nextScene1: 'Apartment',
+    nextScene2: '',
+  ),
 ];

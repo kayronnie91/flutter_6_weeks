@@ -69,6 +69,8 @@ flutter:
     - assets/images/ForestClearing.png
     - assets/images/Lighthouse.png
     - assets/images/FinalChoice.png
+    - assets/images/EndingLightExtinguished.png
+    - assets/images/EndingAwakening.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
